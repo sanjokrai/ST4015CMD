@@ -138,6 +138,3 @@ ORDER BY m.JoinDate;
 
 
 
-<div align="center">
-<sub>ST4015CMD Coursework · Coventry University · 2026</sub>
-</div>
