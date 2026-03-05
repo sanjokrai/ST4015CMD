@@ -1,0 +1,19 @@
+version: '3.8'
+
+services:
+  db:
+    image: mysql:8.0
+    container_name: collegeclub_db
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: CollegeClub
+    ports:
+      - "3306:3306"
+    volumes:
+      - ./task3_database/schema.sql:/docker-entrypoint-initdb.d/1_schema.sql
+      - ./task3_database/insert_data.sql:/docker-entrypoint-initdb.d/2_insert_data.sql
+      - db_data:/var/lib/mysql
+
+volumes:
+  db_data:
